@@ -19,6 +19,7 @@ public class InputData {
 
 
     static class Endpoint {
+        long index;
         long serverLathency;
         List<CasheServerConnection> casheServerConnection = new ArrayList<>();
         List<EndpointRequest> requests;

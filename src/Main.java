@@ -23,7 +23,7 @@ public class Main {
             cashe.freeSize = cachesSizes;
             inputData.cashes.add(cashe);
         }
-        
+
         for (long i = 0; i < videosCount; ++i) {
             InputData.Video video = new InputData.Video();
             video.index = i;
@@ -42,6 +42,7 @@ public class Main {
                 casheServerConnection.lathency = scanner.nextLong();
                 endpoint.casheServerConnection.add(casheServerConnection);
             }
+            endpoint.index = i;
             inputData.endpoints.add(endpoint);
         }
 
