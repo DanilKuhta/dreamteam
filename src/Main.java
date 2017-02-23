@@ -14,6 +14,16 @@ public class Main {
 
         InputData inputData = new InputData();
 
+        inputData.cacheCapasity = cachesSizes;
+        inputData.cachesCount = cashesCount;
+
+        for (int i = 0; i < cashesCount; ++i) {
+            InputData.Cashe cashe = new InputData.Cashe();
+            cashe.index = i;
+            cashe.freeSize = cachesSizes;
+            inputData.cashes.add(cashe);
+        }
+        
         for (long i = 0; i < videosCount; ++i) {
             InputData.Video video = new InputData.Video();
             video.index = i;

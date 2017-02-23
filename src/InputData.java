@@ -7,6 +7,15 @@ public class InputData {
     List<Video> videos = new ArrayList<>();
     List<Endpoint> endpoints = new ArrayList<>();
     List<EndpointRequest> endpointRequests = new ArrayList<>();
+    List<Cashe> cashes = new ArrayList<>();
+    long cacheCapasity;
+    long cachesCount;
+
+    static class Cashe {
+        long index;
+        long freeSize;
+        List<Video> videos = new ArrayList<>();
+    }
 
 
     static class Endpoint {
