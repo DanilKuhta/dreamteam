@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new FileInputStream("test"));
+        Scanner scanner = new Scanner(new FileInputStream("kittens.in"));
         long videosCount = scanner.nextLong();
         long endpointsCount = scanner.nextLong();
         long requestsCount = scanner.nextLong();
         long cashesCount = scanner.nextLong();
+        long cachesSizes = scanner.nextLong();
 
         InputData inputData = new InputData();
 
@@ -42,6 +43,7 @@ public class Main {
             endpointRequest.video = inputData.videos.get((int) videoIndex);
             endpointRequest.endpoint = inputData.endpoints.get((int) endpointIndex);
             endpointRequest.count = videoRequestsCount;
+            inputData.endpointRequests.add(endpointRequest);
         }
     }
 }
